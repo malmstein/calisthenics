@@ -1,5 +1,5 @@
 // Serve from cache first (works offline at the gym), refresh cache in background.
-const CACHE = 'calisthenics-v1';
+const CACHE = 'calisthenics-v2';
 const FILES = ['./', 'index.html', 'app.js', 'logic.js', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())));
